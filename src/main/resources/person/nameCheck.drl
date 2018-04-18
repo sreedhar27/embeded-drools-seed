@@ -1,0 +1,11 @@
+package com.test.drools.person;
+
+import com.test.drools.Person;
+
+global java.io.PrintStream out
+
+rule "rule 1" when
+    m : Person( )
+then
+    System.out.println( m.getName() + ": " +  m.getAddress() );
+end
